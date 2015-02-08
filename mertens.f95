@@ -28,7 +28,7 @@ PROGRAM mertens
 
     INTEGER, EXTERNAL :: mertensFunction, mobius
     INTEGER :: i, current
-    INTEGER, PARAMETER :: high = 2, low = 0
+    INTEGER, PARAMETER :: high = 40, low = 0
 
     current = 0
 
@@ -108,7 +108,6 @@ PURE RECURSIVE INTEGER FUNCTION bigOmega(x, count) RESULT(res)
 END FUNCTION bigOmega
 
 PURE INTEGER FUNCTION mobius(x) 
-    ! try to make this function pure
     USE trashbin, only: bigOmega, isSquareFree 
     implicit none
 
